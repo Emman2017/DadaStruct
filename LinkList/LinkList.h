@@ -8,7 +8,7 @@
 */
 typedef enum
 {
-	OK    = 0,
+	OK    =  0,
 	ERROR = -1
 }Status;
 typedef int    ElemType;
@@ -16,7 +16,7 @@ typedef struct LinkList_ *PLinkList;
 typedef struct LinkList_
 {
 	ElemType          mElem;
-	PLinkList		      mNext;
+	PLinkList         mNext;
 }LinkList;
 /*
 To-Do :Creating a LinkList-struct-body and becoming head-node.
@@ -79,7 +79,7 @@ To-Do :Inserting new element.
 Param :In order to use external PLinkList variable and next-index(range:[1,n]) and new-element.
        such thar: case(L:a b c nextIndex:2 new-element:d)===>result(L: a d b c).
 Time  :O(n) (use time to find the position.)
-Return:Status  (OK: L && nextIndex-in-the-valid-range)
+Return:Status  (OK: L && nextIndex-in-the-valid-range && malloc(...) be called successfully.)
 */
 Status ListInsert(PLinkList L, int nextIndex, ElemType *newElem);
 
